@@ -13,7 +13,7 @@
 #include <fcntl.h>
 
 /**
- * Struct variables - Struct to save arguments
+ * struct variables - Struct to save arguments
  * @buffer: Argument
  * @array_tokens: Array of tokens
  *
@@ -25,7 +25,24 @@ typedef struct variables
 	char **array_tokens;
 } vars_t;
 
+/**
+ * struct builtins - Struct for execute function from match
+ * @name: match
+ * @f: Function
+ *
+ * Description: Is a struct for execute a function from match
+ */
+typedef struct builtins
+{
+	char *name;
+	void (*f)(vars_t *);
+} builtins_t;
+
+void (*check_for_builtins(vars_t *vars))(vars_t *vars);
 char **tokenizer(char *buffer, char *delimiter);
+
+void file1(vars_t *vars);
+void file2(vars_t *vars);
 
 int _putchar(char c);
 int _puts(char *s);
