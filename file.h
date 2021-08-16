@@ -43,6 +43,7 @@ char **tokenizer(char *buffer, char *delimiter);
 
 void file1(vars_t *vars);
 void file2(vars_t *vars);
+void exit_2(vars_t *vars);
 
 int _putchar(char c);
 int _puts(char *s);
