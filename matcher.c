@@ -41,6 +41,8 @@ void file1(vars_t *vars)
 	int counter = 0;
 	int z = 0;
 
+	(void)vars;
+
 	while (str[counter])
 		counter++;
 	new_str = malloc(sizeof(char) * counter + 1);
@@ -63,5 +65,6 @@ void file1(vars_t *vars)
  */
 void exit_2(vars_t *vars)
 {
+	(void)vars;
 	exit(98);
 }

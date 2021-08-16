@@ -11,8 +11,9 @@ int main(int argc, char **argv)
 {
 	vars_t vars = {NULL, NULL};
 	size_t len_buffer = 0;
-	ssize_t gl;
 
+	(void)argc;
+	(void)argv;
 
 	_puts("$ ");
 
