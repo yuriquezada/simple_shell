@@ -1,25 +1,39 @@
-#include <stdio.h>
 #include "file.h"
 
+/**
+ * check_for_builtins - Verify match of string
+ * @vars: Variables
+ *
+ * Return: Nothing
+ */
 void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 {
 	unsigned int i;
 	builtins_t check[] = {
 		{"1", file1},
-		{"2", file2},
+		{"exit", exit_2},
 		{NULL, NULL}
 	};
-	
+
 	for (i = 0; check[i].f != NULL; i++)
 	{
 		if (strcmp(vars->array_tokens[0], check[i].name) == 0)
 			break;
 	}
-	if (check[i].f !=NULL)
+	if (check[i].f != NULL)
+	{
+		_puts("$ ");
 		check[i].f(vars);
+	}
 	return (check[i].f);
 }
 
+/**
+ * file1 - Test function
+ * @vars: Variable
+ *
+ * Return: Nothing
+ */
 void file1(vars_t *vars)
 {
 	char *str = "Hola mundo";
@@ -36,9 +50,18 @@ void file1(vars_t *vars)
 		new_str[z] = str[z];
 		z++;
 	}
+
+	printf("Hola mundo\n");
 }
 
-void file2(vars_t *vars)
+
+/**
+ * exit_2 - Function to exit the program
+ * @vars: Variable
+ *
+ * Return: Nothing
+ */
+void exit_2(vars_t *vars)
 {
-	
+	exit(98);
 }
