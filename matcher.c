@@ -23,7 +23,6 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 	}
 	if (check[i].f != NULL)
 	{
-		_puts("$ ");
 		check[i].f(vars);
 	}
 	return (check[i].f);

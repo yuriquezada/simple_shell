@@ -27,6 +27,7 @@ int main(int argc, char **argv, char *envp[])
 				_putchar('\n');
 			}
 		}
+
 		vars.array_tokens = tokenizer(vars.buffer, " \n");
 		if (vars.array_tokens == NULL)
 		{
@@ -43,6 +44,7 @@ int main(int argc, char **argv, char *envp[])
 		}
 		_puts("$ ");
 	}
+	_putchar('\n');
 
 	return (0);
 }
