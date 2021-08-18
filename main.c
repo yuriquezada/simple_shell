@@ -19,6 +19,8 @@ int main(int argc, char **argv)
 
 	while ((getline(&(vars.buffer), &len_buffer, stdin)) != -1)
 	{
+
+
 		vars.array_tokens = tokenizer(vars.buffer, " \n");
 		if (vars.array_tokens == NULL)
 		{
@@ -35,6 +37,7 @@ int main(int argc, char **argv)
 		}
 		_puts("$ ");
 	}
+	_putchar('\n');
 
 	return (0);
 }
