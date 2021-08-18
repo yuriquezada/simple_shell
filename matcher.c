@@ -12,6 +12,7 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 	builtins_t check[] = {
 		{"1", file1},
 		{"exit", exit_2},
+		{"env", print_env},
 		{NULL, NULL}
 	};
 

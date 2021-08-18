@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char **argv, char *envp[])
 {
 	vars_t vars = {NULL, NULL};
 	size_t len_buffer = 0;
@@ -19,6 +19,14 @@ int main(int argc, char **argv)
 
 	while ((getline(&(vars.buffer), &len_buffer, stdin)) != -1)
 	{
+		if (vars.buffer = "env")
+		{
+			for (int i = 0 ; envp[i] ; i++)
+			{
+				_puts(envp[i]);
+				_putchar('\n');
+			}
+		}
 		vars.array_tokens = tokenizer(vars.buffer, " \n");
 		if (vars.array_tokens == NULL)
 		{

@@ -47,5 +47,6 @@ void exit_2(vars_t *vars);
 
 int _putchar(char c);
 int _puts(char *s);
+void print_env(vars_t *vars);
 
 #endif
