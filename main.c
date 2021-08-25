@@ -11,6 +11,7 @@ int main(int argc, char **argv, char *envp[])
 {
 	vars_t vars = {NULL, NULL};
 	size_t len_buffer = 0;
+	int i;
 
 	(void)argc;
 	(void)argv;
@@ -19,9 +20,10 @@ int main(int argc, char **argv, char *envp[])
 
 	while ((getline(&(vars.buffer), &len_buffer, stdin)) != -1)
 	{
-		if (vars.buffer = "env")
+
+		if (!strcmp(vars.buffer, "env\n"))
 		{
-			for (int i = 0 ; envp[i] ; i++)
+			for (i = 0 ; envp[i] ; i++)
 			{
 				_puts(envp[i]);
 				_putchar('\n');
@@ -45,6 +47,8 @@ int main(int argc, char **argv, char *envp[])
 		_puts("$ ");
 	}
 	_putchar('\n');
+	free(vars.buffer);
+	free(vars.array_tokens);
 
 	return (0);
 }
