@@ -5,13 +5,19 @@ This program is shell-based, that is, it behaves like a command line interpreter
 
 ## Usage
 1. Clone the repository:
-    ``git clone https://github.com/yuriquezada/simple_shell.git``
+    ```
+    git clone https://github.com/yuriquezada/simple_shell.git
+    ```
 2. Locate ourselves in the root folder of the directory.
     
 3. Inside the simple_shell folder, run the following command:
-    ``valgrind  gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell``
+    ```
+    valgrind  gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
+    ```
 4. Finally run the program by typing the following:
-    ``./shell``
+    ```
+    ./shell
+    ```
     The output of the new shell is the following:
     ```
     julien@ubuntu:~/shell$./shell
