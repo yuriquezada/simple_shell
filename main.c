@@ -4,7 +4,7 @@
  * main - Main function
  * @argc: Number of arguments
  * @argv: List of arguments
- *
+ * @envp: List of enviroments
  * Return: 0
  */
 int main(int argc, char **argv, char *envp[])
@@ -37,7 +37,6 @@ int main(int argc, char **argv, char *envp[])
 			continue;
 		}
 
-
 		if (check_for_builtins(&vars) == NULL)
 		{
 			_puts("No encontrado ");
@@ -47,8 +46,6 @@ int main(int argc, char **argv, char *envp[])
 		_puts("$ ");
 	}
 	_putchar('\n');
-	free(vars.buffer);
-	free(vars.array_tokens);
 
 	return (0);
 }
