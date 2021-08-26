@@ -44,7 +44,7 @@ This program is shell-based, that is, it behaves like a command line interpreter
 
 If we want to print all the variables of the current environment, we will write ``env`` in our new ``shell``
 ````
-julien@ubuntu:~/shell$ ./shell
+user@ubuntu:~/shell$ ./shell
 $ env
 HOSTNAME=ef1189cc98cb
 LANGUAGE=en_US:en
