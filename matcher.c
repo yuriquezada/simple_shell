@@ -13,6 +13,7 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 		{"1", file1},
 		{"exit", exit_2},
 		{"env", print_env},
+		{"/bin/ls", print_list},
 		{NULL, NULL}
 	};
 
@@ -66,5 +67,6 @@ void file1(vars_t *vars)
 void exit_2(vars_t *vars)
 {
 	(void)vars;
+	free_shell(vars);
 	exit(98);
 }

@@ -43,9 +43,9 @@ int main(int argc, char **argv, char *envp[])
 			_puts(vars.array_tokens[0]);
 			_putchar('\n');
 		}
+		free_shell(&vars);
 		_puts("$ ");
 	}
 	_putchar('\n');
-	free_shell(&vars);
-	return (0);
+	exit(0);
 }
