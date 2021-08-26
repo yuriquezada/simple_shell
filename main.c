@@ -46,6 +46,6 @@ int main(int argc, char **argv, char *envp[])
 		_puts("$ ");
 	}
 	_putchar('\n');
-
+	free_shell(&vars);
 	return (0);
 }
